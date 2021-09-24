@@ -83,3 +83,10 @@ table{
     align-items: center;
     justify-content: center;
   }
+
+  .material-icons {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
