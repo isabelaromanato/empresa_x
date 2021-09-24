@@ -17,7 +17,7 @@ $novoFuncionario = [
 
 editarFuncionario("./funcionarios.json", $novoFuncionario);
 
-header("location: index.php");
+header("location: empresaX.php");
 
 
 ?>

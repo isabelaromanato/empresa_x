@@ -1,6 +1,6 @@
 [
     {
-        "usuario": "Nigel",
+        "usuario": "Cristiano",
         "senha": "123456"
     },
     {
@@ -10,5 +10,9 @@
     {
         "usuario": "Isabela",
         "senha": "789012"
+    },
+    {
+        "usuario": "Nigel",
+        "senha": "740012"
     }
 ]

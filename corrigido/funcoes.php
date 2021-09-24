@@ -90,3 +90,56 @@ function editarFuncionario($nomeArquivo, $funcionarioEditado) {
     file_put_contents($nomeArquivo, $json);
     
 }
+
+//funções referentes ao sistema de login
+
+function realizarLogin($usuario, $senha, $dados)
+{
+
+    foreach ($dados as  $dado) {
+       
+        if ($dado->usuario == $usuario && $dado->senha == $senha) {
+      
+            //VARIÁVEIS DE SESSÃO
+
+            $_SESSION["usuario"] = $dado->usuario;
+            $_SESSION["id"] = session_id();
+            $_SESSION["data_hora"] = date('d/m/Y - h:i:s');
+
+            header('location: empresaX.php');
+            exit;
+
+            
+        } 
+                    
+    }
+
+    header('location:index.php');
+}
+
+//FUNÇÃO DE VERIFICAÇÃO DE LOGIN:
+// VERIFICA SE O USUARIO PASSOU PELO PROCESSO DE LOGIN
+
+function verificarLogin (){
+    
+    if ($_SESSION["id"] != session_id() || (empty($_SESSION["id"])) ){
+
+        header('location:index.php');
+
+    }
+    
+}
+
+
+//FUNÇÃO DE FINALIZAÇÃO DE LOGIN:
+//EFETUA A AÇÃO DE SAIR DO USUÁRIO- DESTRUINDO A FUNÇÃO
+
+function finalizarLogin() {
+    
+    session_unset(); //limpa todas as variaveis de sessão
+    session_destroy(); //destroi a sessão ativa
+
+    header('location:empresaX.php');
+}
+
+?>
