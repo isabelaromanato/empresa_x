@@ -8,13 +8,14 @@
     align-items: center;
     background: #6C7A89;
 
+
 }
 
 .container-form{
 
     width: 300px;
     height: 300px;
-    background: #fff;
+    background: #c1c1c1;
     padding: 25px;;
 
 }
@@ -49,4 +50,10 @@ h1{
     margin: 0;
     text-align: right;
 } */
+
+.form-control {
+    
+}
+
+
 
