@@ -26,16 +26,14 @@ verificarLogin();
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>Empresa X</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<title>Empresa X</title>
 </head>
 
 <body>
-    <h1>Funcionários da EMPRESA X</h1>
-    <p>A empresa conta com <em> <?= count($funcionarios) ?> </em></p>
 
-    <div class='toolbar'>
+<div class='toolbar'>
 
 <h2>
 
@@ -45,11 +43,16 @@ verificarLogin();
 
 <h2>
 
-   <a class="material-icons" href="processa_login.php?logout=true">logout</a>
+<button>  <a class="material-icons" href="processa_login.php?logout=true">logout</a></button>
+
+ 
 
 </h2>
 
 </div>
+    <h1>Funcionários da EMPRESA X</h1>
+    <p>A empresa conta com <em> <?= count($funcionarios) ?> </em></p>
+
 
     <form>
         <input type="text" value="<?= isset($_GET["filtro"]) ? $_GET["buscarFuncionario"] : "" ?>" name="buscarFuncionario" placeholder="Buscar Funcionário">
